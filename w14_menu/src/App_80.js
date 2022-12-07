@@ -1,9 +1,10 @@
 import React,{Component} from 'react'
 import { useState } from 'react';
-import { useMenuContext_80 } from './MenuContext';
 import Category_80 from './components/Category_80';
 import Menu_80 from './components/Menu_80';
+import items from './data'
 
+import { useMenuContext_80 } from './MenuContext';
 
 const App_80 = () => {
   const {menuItems, filterItems, categories} = useMenuContext_80();

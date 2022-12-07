@@ -1,6 +1,4 @@
 import  React,{ useState, useContext} from 'react';
-import Category_80 from './components/Category_80';
-import Menu_80 from './components/Menu_80';
 import items from './data';
 
 const allCategories = ['all', 'breakfast', 'lunch', 'shakes', '80'];
@@ -28,7 +26,7 @@ const MenuContext = ({children}) => {
   )
 }
   const useMenuContext_80 = () => {
-    return useContext(MenuContext)
+    return useContext(MenuContext_80);
   }
 
   export {MenuContext, useMenuContext_80};
