@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import React from 'react';
+import {useBlogContext} from '../App_80';
 
-const Blog_80 = ({ id, img, style, title, content, removeItem}) => {
-  // console.log('id', id);
+const Blog_80 = ({ id, img, category, title, content}) => {
+  const { removeItem } = useBlogContext();
   return (
     <article className='blog'>
       <img src={img} alt='Coffee photo' className='img blog-img' />
       <div className='blog-content'>
-        <span>{style}</span>
+        <span>{category}</span>
         <h3>{title}</h3>
         <p>{content}</p>
         <div className='item-control'>
@@ -15,8 +16,7 @@ const Blog_80 = ({ id, img, style, title, content, removeItem}) => {
             <button
               type='button'
               className='delete-btn'
-              onClick={() => removeItem(id)}
-            >
+              onClick={() => removeItem(id)}>
               {' '}
               delete{' '}
             </button>
